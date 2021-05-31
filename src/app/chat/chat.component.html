@@ -1,0 +1,13 @@
+<div *ngIf='logged' class='chat-messages'>
+  <div class='welcome-chat'></div>
+  <div class='chat-messages-show-container'>
+    <ul class='chat-messages-show-list' *ngFor='let message of messages'>
+      <li class='chat-box-message'>{{message}}</li>
+    </ul>
+  </div>
+
+  <div class='chat-messages-create-container'>
+    <input class='chat-messages-create-input' id='input' type="text" [(ngModel)]='inputchat'placeholder='Ingrese su mensaje'>
+    <button class='chat-messages-create-button' (click)="sendMessage()" [disabled]='!logged'> Send </button>
+  </div>
+</div>

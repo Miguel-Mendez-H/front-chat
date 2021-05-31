@@ -1,0 +1,7 @@
+<div *ngIf='!logged' class=login>
+    <input class='create-name' type='text' placeholder='Ingrese su Usuario' id='username' [(ngModel)]="user">
+    <input class='create-room' type='text' placeholder='Ingrese la sala' id='room' [(ngModel)]="room">
+    <button class='create-user-room' (click)='login()' [disabled]='!user || !room'> Send </button>
+</div>
+
+<div *ngIf='error'>{{error}}</div>
