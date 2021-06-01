@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   createSocket = () => {
-    const SOCKET_ENDPOINT = 'http://localhost:3000'
+    const SOCKET_ENDPOINT = 'https://back-chat.herokuapp.com/'
     this.socket = io(SOCKET_ENDPOINT)
   }
 }
