@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   createSocket = () => {
-    const SOCKET_ENDPOINT = 'localhost:3000'
+    const SOCKET_ENDPOINT = 'http://localhost:3000'
     this.socket = io(SOCKET_ENDPOINT)
   }
 }
